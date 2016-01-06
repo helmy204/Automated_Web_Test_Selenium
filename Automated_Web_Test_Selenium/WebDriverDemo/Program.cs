@@ -1,5 +1,7 @@
 ﻿using OpenQA.Selenium;
+using OpenQA.Selenium.Chrome;
 using OpenQA.Selenium.Firefox;
+using OpenQA.Selenium.IE;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,7 +14,9 @@ namespace WebDriverDemo
     {
         static void Main(string[] args)
         {
-            IWebDriver driver = new FirefoxDriver();
+            //IWebDriver driver = new FirefoxDriver();
+            //IWebDriver driver = new InternetExplorerDriver(@"C:\Libraries\");
+            IWebDriver driver = new ChromeDriver(@"C:\Libraries\");
             driver.Url = "http://www.google.com";
         }
     }
