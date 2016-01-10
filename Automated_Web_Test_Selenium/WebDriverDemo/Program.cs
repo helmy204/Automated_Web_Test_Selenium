@@ -16,8 +16,14 @@ namespace WebDriverDemo
         {
             //IWebDriver driver = new FirefoxDriver();
             //IWebDriver driver = new InternetExplorerDriver(@"C:\Libraries\");
+            //IWebDriver driver = new ChromeDriver(@"C:\Libraries\");
+            //driver.Url = "http://www.google.com";
+
             IWebDriver driver = new ChromeDriver(@"C:\Libraries\");
             driver.Url = "http://www.google.com";
+
+            var searchBox = driver.FindElement(By.Id("lst-ib"));
+            searchBox.SendKeys("pluralsight");
         }
     }
 }
