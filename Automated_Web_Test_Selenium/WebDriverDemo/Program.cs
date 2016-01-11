@@ -24,6 +24,12 @@ namespace WebDriverDemo
 
             var searchBox = driver.FindElement(By.Id("lst-ib"));
             searchBox.SendKeys("pluralsight");
+            searchBox.Submit();
+
+            driver.Manage().Timeouts().ImplicitlyWait(TimeSpan.FromSeconds(10));
+
+            var imagesLink = driver.FindElements(By.ClassName("q"))[0];
+            imagesLink.Click();
         }
     }
 }
